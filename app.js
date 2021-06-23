@@ -67,6 +67,7 @@ app.post('/compose', (req, res) => {
   res.redirect('/');
 });
 
+// This line is very immportant for Heroku! We want to be listening on this port rather than on a hard-coded port. Heroku actually passes its own port variable to this env.
 let port = process.env.PORT;
 
 if (port == null || port == "") {
